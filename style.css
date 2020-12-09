@@ -1,0 +1,243 @@
+.ex-1-square {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+}
+.ex-2-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+.ex-3-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+.ex-4-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+.ex-5-square {
+    margin: 20px;
+    width: 60px;
+    height: 60px;
+    background: red;
+}
+.ex-6-img, .ex-7-img, .ex-8-img {
+    width: 500px;
+}
+
+.ex-9-img {
+    margin: 50px 100px;
+    width: 400px;
+}
+.ex-10-icon {
+    font-size: 60px;
+}
+.ex-11-icon {
+    font-size: 60px;
+}
+.ex-12-button, .ex-13-button {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 70px;
+    text-transform: uppercase;
+    border: 3px solid #1b3c59;
+    color: #1b3c59;
+    font-size: 20px;
+    line-height: 70px;
+    text-align: center;
+    text-decoration: none;
+}
+.ex-12-top-white, .ex-13-top-white {
+    position: absolute;
+    top: -10px;
+    left: 10%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+.ex-12-bottom-white, .ex-13-bottom-white {
+    position: absolute;
+    bottom: -10px;
+    right: 20%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+
+
+/* ESERCIZI */
+
+/* esercizio 1 */
+.ex-1-square {
+  transition: background 2s;
+}
+
+.ex-1-square:hover {
+  background-color: red;
+}
+
+/* esercizio 2 */
+.ex-2-square {
+  transition: width 5s;
+}
+
+.ex-2-square:active {
+  width: 100%;
+}
+
+/* esercizio 3 */
+.ex-3-square {
+  transition: all 1s;
+}
+
+.ex-3-square:hover {
+  border-radius: 50%;
+  transition: all 3s;
+}
+
+/* esercizio 4 */
+.ex-4-square {
+  transition: background 2s;
+}
+
+.ex-4-square:hover {
+  background-color: transparent;
+}
+
+/* esercizio 5 */
+.ex-5-square {
+  transition: all 2s;
+}
+
+.ex-5-square:hover {
+  transform: scale(2);
+}
+
+.ex-5-square:active {
+  transform: scale(.5);
+}
+
+/* esercizio 6 */
+.ex-6-img:hover {
+  filter: grayscale(100%);
+}
+
+/* esercizio 7 */
+.ex-7-img {
+  transition: all 2s;
+}
+
+.ex-7-img:hover {
+  filter: hue-rotate(90deg) blur(3px);
+}
+
+/* esercizio 8 */
+.ex-8-img {
+  transition: all 2s;
+}
+
+.ex-8-img:hover {
+  filter: sepia(100%) brightness(150%);
+  border-radius: 20px;
+}
+
+/* esercizio 9 */
+.ex-9-img {
+  transition: all 2s;
+}
+
+.ex-9-img:hover {
+  filter: saturate(200%) contrast(150%);
+  border-radius: 20px;
+  transform: scale(1.5);
+}
+
+/* esercizio 10 */
+.ex-10-icon {
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  from {transform: rotate(0deg)}
+  to {transform: rotate(360deg);}
+}
+
+/* esercizio 11 */
+.ex-11-icon:hover {
+  animation-name: rotate-2;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate-2 {
+  0% {transform: rotate(0deg)}
+  75% {transform: rotate(270deg)}
+  100% {transform: rotate(0deg);}
+}
+
+/* esercizio 12 */
+.ex-12-button:hover .ex-12-top-white {
+  animation-name: button-top;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes button-top {
+  0% {left: 10%}
+  50% {left: calc(90% - 60px)}
+  100% {left: 10%}
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+  animation-name: button-bottom;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes button-bottom {
+  0% {right: 20%}
+  50% {right: calc(90% - 60px)}
+  100% {right: 20%}
+}
+
+/* esercizio 13 */
+.ex-13-button:hover .ex-13-top-white {
+  animation-name: button-2-top;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes button-2-top {
+  0% {left: 10%; top: -10px}
+  30% {left: calc(100% - 50px); top: -10px}
+  45% {left: calc(100% - 50px); top: 100%}
+  75% {left: -10px; top: 100%}
+  90% {left: -10px; top: -10px}
+  100% {left: 10%; top: -10px}
+}
+
+.ex-13-button:hover .ex-13-bottom-white {
+  animation-name: button-2-bottom;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes button-2-bottom {
+  0% {right: 20%; bottom: -10px}
+  30% {right: calc(100% - 50px); bottom: -10px}
+  45% {right: calc(100% - 50px); bottom: 100%}
+  75% {right: -10px; bottom: 100%}
+  90% {right: -10px; bottom: -10px}
+  100% {right: 20%; bottom: -10px}
+}
